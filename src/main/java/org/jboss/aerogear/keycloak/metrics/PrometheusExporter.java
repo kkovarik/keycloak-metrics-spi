@@ -78,7 +78,7 @@ public final class PrometheusExporter {
         requestDuration = Histogram.build()
             .name("keycloak_request_duration")
             .help("Request duration")
-            .buckets(2, 10, 100, 1000)
+            .buckets(10, 100, 1000)
             .labelNames("method", "route")
             .register();
 
